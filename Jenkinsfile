@@ -24,7 +24,7 @@ pipeline {
 				echo "creating an image..."
 				withCredentials([usernamePassword(credentialsId: 'docker-hub-cred', passwordVariable: 'PASSWORD', 			usernameVariable: 'USERNAME')]) {
 					sh label: '', script: 'docker login -u $USERNAME -p $PASSWORD'
-					sh label: '', script: 'docker build -t kiranfegade/hello-world-rest-api:3.0 .'
+					sh label: '', script: 'docker build -t kiranfegade121/hello-world-rest-api:3.0 .'
 				}
 			}			
 		}
