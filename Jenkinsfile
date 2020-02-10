@@ -31,9 +31,7 @@ pipeline {
 		
 		stage("push docker image") {
 			steps {
-				withCredentials([usernamePassword(credentialsId: 'docker-hub-cred', passwordVariable: 'PASSWORD', 			usernameVariable: 'USERNAME')]) {
-					sh label: '', script: 'docker push kiranfegade121/hello-world-rest-api:3.0'
-				}
+				sh label: '', script: 'docker push kiranfegade121/hello-world-rest-api:3.0'
 			}
 		}
 		
